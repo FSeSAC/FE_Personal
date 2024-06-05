@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>성환 프로젝트</title>
+    <title>backTicle</title>
+    <link rel="icon" href="./image/rani_favicon-96x96.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
@@ -15,6 +16,7 @@
 
 </head>
 <body class="bg-white border-gray-200 dark:bg-gray-900">
+    <!-- 페이지 로드시 공지 모달 창 -->
     <!-- <aside class="Modal">
         <div id="default-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed z-50 justify-center items-center w- md:inset-0 h-[calc(100%-1rem)] max-h-full">
         <div class="relative p-4 w-full max-w-2xl max-h-full">
@@ -58,10 +60,11 @@
         </div>
     </aside> -->
     <header class="header border 1px">
+        <!-- Nav 바 -->
         <nav class="bg-white border-gray-200 dark:bg-gray-900">
             <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="./index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
-                 <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">SungHwan's portfolio</span>
+                 <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">backTicle</span>
             </a>
             <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
                 <span class="sr-only">Open main menu</span>
@@ -117,25 +120,20 @@
         </nav>
     </header>
     <main class="main bg-white border-gray-200 dark:bg-gray-900">
-        <!-- <section class="m-5 md:grid-cols-4 gap-4">
-        </section> -->
+        <!-- 메인 -->
         <section class="section">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <!-- 1열 -->
                 <div class="grid gap-4">
-
-
-
-
-
-
-
-             
-                    <!-- 첫번째 사진 -->
-                    <div>
-                        <button data-modal-target="modal_first_pic" data-modal-toggle="modal_first_pic" class="block text-white  hover:bg-blue-200 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-80" type="button">
-                            <img cxlass="h-auto max-w-full rounded-lg hover:scale-110 duration-300" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg" alt="">
+                    <div>                
+                        <button data-modal-target="modal_default" 
+                            data-modal-toggle="modal_default" 
+                            class="block text-white  focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-5 py-2.5 text-center" type="button">
+                            <img class="h-auto max-w-full rounded-lg hover:scale-110 duration-300" src="./image/shoppingmall.png" alt="">
                         </button>
-                        <div id="modal_first_pic" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                        <!-- Main Modal -->
+                        <div id="modal_default" tabindex="-1" aria-hidden="true" 
+                            class="hidden overflow-y-auto overflow-x-hidden fixed z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
                             <div class="relative p-4 w-full max-w-2xl max-h-full">
                                 <!-- Modal content -->
                                 <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
@@ -144,7 +142,7 @@
                                         <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
                                             Terms of Service
                                         </h3>
-                                        <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="modal_first_pic">
+                                        <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="modal_default">
                                             <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
                                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
                                             </svg>
@@ -162,52 +160,106 @@
                                     </div>
                                     <!-- Modal footer -->
                                     <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
-                                        <button data-modal-hide="modal_first_pic" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">I accept</button>
-                                        <button data-modal-hide="modal_first_pic" type="button" class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Decline</button>
+                                        <button data-modal-hide="modal_default" type="button" 
+                                        class="text-white   focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-5 py-2.5 text-center">I accept</button>
+                                        <button data-modal-hide="modal_default" type="button" 
+                                        class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Decline</button>
                                     </div> 
                                 </div>
                             </div>
                         </div>
 
 
-                    </div>
+                    </div>   
                     <!-- <div>
                         <img class="h-auto max-w-full rounded-lg hover:scale-110 duration-300" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg" alt="">
                     </div> -->
                     <div class="m-5 h-auto max-w-full hover:scale-110 duration-300 ">
                         <!-- <h1 class="mb-4 text-2xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">최선의 발전을 향해</h1>
                         <a class="mb-6 text-lg font-normal leading-none tracking-tight text-gray-500 lg:text-xls m:px-16 lg:px-30 xl:px-48 dark:text-gray-400">잠재력에 투자합니다</a> -->
-                        <h1 class="my-10 text-center mb-4 text-2xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Invest</h1>
+                        <h1 class="my-10 text-center mb-4 text-2xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Potential</h1>
                     </div>
                     <div>
                         <img class="h-auto max-w-full rounded-lg hover:scale-110 duration-300" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg" alt="">
                     </div>
                 </div>
+                <!-- 2열 -->
                 <div class="grid gap-4">
                     <div>
-                        <img class="h-auto max-w-full rounded-lg hover:scale-110 duration-300" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg" alt="">
+                        <div>
+                            <!-- <img class="h-auto max-w-full rounded-lg hover:scale-110 duration-300" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg" alt=""> -->
+                            <h1 class="text-center m-5 mb-4 text-2xl font-extrabold hover:scale-110 duration-300 leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Develop</h1>
+                        </div>
+                        <!-- 첫번째 사진 -->
+                    <div>                
+                        <button data-modal-target="modal_default" 
+                            data-modal-toggle="modal_default" 
+                            class="block text-white  focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-5 py-2.5 text-center" type="button">
+                            <!-- <img cxlass="h-auto max-w-full rounded-lg hover:scale-110 duration-300" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg" alt=""> -->
+                            <video src="./video/bike-buddy.mov" class="h-auto max-w-full rounded-lg hover:scale-110 duration-300" controls autoplay loop></video>
+                        </button>
+                        <!-- Main Modal -->
+                        <div id="modal_default" tabindex="-1" aria-hidden="true" 
+                            class="hidden overflow-y-auto overflow-x-hidden fixed z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                            <div class="relative p-4 w-full max-w-2xl max-h-full">
+                                <!-- Modal content -->
+                                <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                                    <!-- Modal header -->
+                                    <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                                            Terms of Service
+                                        </h3>
+                                        <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="modal_default">
+                                            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                                            </svg>
+                                            <span class="sr-only">Close modal</span>
+                                        </button>
+                                    </div>
+                                    <!-- Modal body -->
+                                    <div class="p-4 md:p-5 space-y-4">
+                                        <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                                            With less than a month to go before the European Union enacts new consumer privacy laws for its citizens, companies around the world are updating their terms of service agreements to comply.
+                                        </p>
+                                        <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                                            The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is meant to ensure a common set of data rights in the European Union. It requires organizations to notify users as soon as possible of high-risk data breaches that could personally affect them.
+                                        </p>
+                                    </div>
+                                    <!-- Modal footer -->
+                                    <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
+                                        <button data-modal-hide="modal_default" type="button" 
+                                        class="text-white   focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-5 py-2.5 text-center">I accept</button>
+                                        <button data-modal-hide="modal_default" type="button" 
+                                        class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Decline</button>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                         
                     </div>
                     <div>
                         <img class="h-auto max-w-full rounded-lg hover:scale-110 duration-300" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg" alt="">
                     </div>
-                    <div>
-                        <!-- <img class="h-auto max-w-full rounded-lg hover:scale-110 duration-300" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg" alt=""> -->
-                        <h1 class="text-center mb-4 text-2xl font-extrabold hover:scale-110 duration-300 leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Develop</h1>
-                    </div>
                 </div>
+                <!-- 3열 -->
                 <div class="grid gap-4">
-                    <div class="hover:scale-110 duration-300">
-                        <!-- <img class="h-auto max-w-full rounded-lg hover:scale-110 duration-300" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg" alt=""> -->
-                        <h1 class="my-10 text-center mb-4 text-2xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Potential</h1>
-                    </div>
                     <div>
-                        <img class="h-auto max-w-full rounded-lg hover:scale-110 duration-300" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg" alt="">
+                        <!-- <img class="h-auto max-w-full rounded-lg hover:scale-110 duration-300" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg" alt=""> -->
+                        <video src="./video/livey2.mov" class="h-auto max-w-full rounded-lg hover:scale-110 duration-300" controls autoplay loop></video>
                     </div>
-                    
+                    <div class="hover:scale-110 duration-300">
+                        <!-- <video src="./video/bike-buddy.mov"></video> -->
+                       <!-- <img class="h-auto max-w-full rounded-lg hover:scale-110 duration-300" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg" alt=""> -->
+                       <h1 class="my-10 text-center mb-4 text-2xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+                           Invest
+                       </h1>
+                   </div>
                     <div>
                         <img class="h-auto max-w-full rounded-lg hover:scale-110 duration-300" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg" alt="">
                     </div>
                 </div>
+                <!-- 4열
                 <div class="grid gap-4">
                     <div>
                         <img class="h-auto max-w-full rounded-lg hover:scale-110 duration-300" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg" alt="">
@@ -218,7 +270,7 @@
                     <div>
                         <img class="h-auto max-w-full rounded-lg hover:scale-110 duration-300" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg" alt="">
                     </div>
-                </div>
+                </div> -->
             </div>
         </section>
     </main>
