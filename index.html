@@ -3,21 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>backTicle</title>
+    <title>Essential Branch</title>
     <link rel="icon" href="./image/rani_favicon-96x96.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-
-
     <script src="./emailCopy.js"></script>
     <script src="./navbarToggle.js"></script>
     <script src="./startModal.js"></script>
-
 </head>
 <body class="bg-white border-gray-200 dark:bg-gray-900">
     <!-- 페이지 로드시 공지 모달 창 -->
-    <!-- <aside class="Modal">
+    <aside class="Modal">
         <div id="default-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed z-50 justify-center items-center w- md:inset-0 h-[calc(100%-1rem)] max-h-full">
         <div class="relative p-4 w-full max-w-2xl max-h-full">
             
@@ -35,19 +32,22 @@
                 </div>
               
                 <div class="p-4 md:p-5 space-y-4">
-                    <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                    <p class="text-base leading-relaxed text-gray-500 dark:text-white">
                         Version Update
                     </p>
-                    <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                        1. MVP 배포
+                    <p class="text-base leading-relaxed text-gray-500 dark:text-white">
+                        1. MVP 배포 
+                        <br>- Jun/4 2024
                         <br>
                         2. 로그인, 회원가입 기능 
                         <br>
                         3. 블로그 기능 
                         <br>
-                        4. 댓글 서비스 
+                        4. 블로그 게시물 무한 스크롤 기능
                         <br>
-                        5. 게시물 태그 서비스 
+                        5. 댓글, 좋아요 서비스 
+                        <br>
+                        6. 게시물 태그 서비스 
                     </p>
                 </div>
                
@@ -58,13 +58,13 @@
                 </div>
             </div>
         </div>
-    </aside> -->
+    </aside>
     <header class="header border 1px">
         <!-- Nav 바 -->
         <nav class="bg-white border-gray-200 dark:bg-gray-900">
             <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="./index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
-                 <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">backTicle</span>
+                 <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Essential Branch</span>
             </a>
             <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
                 <span class="sr-only">Open main menu</span>
@@ -80,6 +80,9 @@
                             Login</a>
                     </li>
                     <li>
+                        <a href="./notice.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Notice</a>
+                    </li>
+                    <li>
                         <a href="./about.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
                     </li>
                     <li>
@@ -90,27 +93,26 @@
                         <!-- <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a> -->
                         <button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
                             Contact
-                            <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                            <!-- <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-                            </svg>
-                            </button>
-                            
+                            </svg> -->
+                        </button>
                             <!-- Dropdown menu -->
                             <div id="dropdownHover" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
                                 <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownHoverButton">
-                                  <li>
+                                    <li>
 
                                     <a onclick="window.open('https://github.com/aixion1506')" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Github</a>
-                                  </li>
-                                  <li>
+                                    </li>
+                                    <li>
                                     <a onclick="window.open('https://velog.io/@aixion1506/posts')" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Velog</a>
-                                  </li>
-                                  <li>
+                                    </li>
+                                    <li>
                                     <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Email</a>
-                                  </li>
-                                  <!-- <li>
+                                    </li>
+                                    <!-- <li>
                                     <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
-                                  </li> -->
+                                    </li> -->
                                 </ul>
                             </div>
                     </li>
@@ -121,7 +123,7 @@
     </header>
     <main class="main bg-white border-gray-200 dark:bg-gray-900">
         <!-- 메인 -->
-        <section class="section">
+        <section class="section m-5">
             <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
                 <!-- 1열 -->
                 <div class="grid gap-4">
@@ -132,12 +134,11 @@
                             <img class="h-auto max-w-full rounded-lg hover:scale-110 duration-300" src="./image/shoppingmall.png" alt="">
                         </button>
                         <!-- Main Modal -->
-                        <div id="extralarge-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-[80vh]">
-                            <div class="relative w-full max-w-7xl max-h-7xl">
+                        <!-- <div id="extralarge-modal" tabindex="-1" class="fixed   z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto"> -->
                                 <!-- Modal content -->
-                                <div class="relative bg-white h-5/6 rounded-lg shadow dark:bg-gray-700">
+                                <!-- <div class="relative scroll bg-white rounded-lg shadow dark:bg-gray-700"> -->
                                     <!-- Modal header -->
-                                    <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                                    <!-- <div class="flex items-center justify-between px-16 md:p-5 border-b rounded-t dark:border-gray-600">
                                         <h3 class="text-xl font-medium text-gray-900 dark:text-white">
                                             이커머스 제작 
                                         </h3>
@@ -147,9 +148,9 @@
                                             </svg>
                                             <span class="sr-only">Close modal</span>
                                         </button>
-                                    </div>
+                                    </div> -->
                                     <!-- Modal body -->
-                                    <div class="p-4 md:p-5 space-y-4 m-9">
+                                    <!-- <div class="p-4 md:p-5 space-y-4 m-9">
                                         <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
                                             With less than a month to go before the European Union enacts new consumer privacy laws for its citizens, companies around the world are updating their terms of service agreements to comply.
                                         </p>
@@ -165,27 +166,16 @@
                                         <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
                                             With less than a month to go before the European Union enacts new consumer privacy laws for its citizens, companies around the world are updating their terms of service agreements to comply.
                                         </p>
-                                        <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                                            The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is meant to ensure a common set of data rights in the European Union. It requires organizations to notify users as soon as possible of high-risk data breaches that could personally affect them.
-                                        </p>
-                                        <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                                            The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is meant to ensure a common set of data rights in the European Union. It requires organizations to notify users as soon as possible of high-risk data breaches that could personally affect them.
-                                        </p>
-                                        <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                                            The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is meant to ensure a common set of data rights in the European Union. It requires organizations to notify users as soon as possible of high-risk data breaches that could personally affect them.
-                                        </p>
-                                    </div>
+                                        
+                                    </div> -->
                                     <!-- Modal footer -->
-                                    <div class="flex items-center p-4 md:p-5 space-x-3 rtl:space-x-reverse border-t border-gray-200 rounded-b dark:border-gray-600">
+                                    <!-- <div class="flex items-center p-4 md:p-5 space-x-3 rtl:space-x-reverse border-t border-gray-200 rounded-b dark:border-gray-600">
                                         <button data-modal-hide="extralarge-modal" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">I accept</button>
                                         <button data-modal-hide="extralarge-modal" type="button" class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Decline</button>
-                                    </div>
+                                    </div> 
                                 </div>
                             </div>
-                        </div>
-        
-
-
+                        </div>-->
                     </div>   
                     <!-- <div>
                         <img class="h-auto max-w-full rounded-lg hover:scale-110 duration-300" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg" alt="">
@@ -195,9 +185,71 @@
                         <a class="mb-6 text-lg font-normal leading-none tracking-tight text-gray-500 lg:text-xls m:px-16 lg:px-30 xl:px-48 dark:text-gray-400">잠재력에 투자합니다</a> -->
                         <h1 class="my-10 text-center mb-4 text-2xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Potential</h1>
                     </div>
-                    <div>
-                        <img class="h-auto max-w-full rounded-lg hover:scale-110 duration-300" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg" alt="">
-                    </div>
+                    <div class="">
+                        <button data-modal-target="modal_default" 
+                                data-modal-toggle="modal_default" 
+                                class="block text-white  focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-5 py-2.5 text-center" type="button">
+                                <div class="h-60 bg-gradient-to-r from-slate-200 to-blue-200  relative h- max-w-full rounded-lg hover:scale-110 duration-300">
+                                    <h1 class="relative  text-4xl top-1/3 left-1/5  m-4  mt-4  text-2xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Next Level</h1>
+                                </div>
+                            </button>
+                            <!-- Main Modal -->
+                            <div id="modal_default" tabindex="-1" aria-hidden="true" 
+                                class="hidden overflow-y-auto overflow-x-hidden fixed z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                                <div class="relative p-4 w-full max-w-2xl max-h-full">
+                                    <!-- Modal content -->
+                                    <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                                        <!-- Modal header -->
+                                        <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                                                For Next Level
+                                            </h3>
+                                            <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="modal_default">
+                                                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                                                </svg>
+                                                <span class="sr-only">Close modal</span>
+                                            </button>
+                                        </div>
+                                        <!-- Modal body -->
+                                        <div class="p-4 md:p-5 space-y-4">
+                                            <p class="text-base leading-relaxed text-black dark:text-white">FE
+                                                <p class="text-base leading-relaxed text-gray-500 dark:text-white">
+                                                    - reactquery를 사용한 무한 스크롤
+                                                </p>
+                                                <p class="text-base leading-relaxed text-gray-500 dark:text-white">
+                                                    - 성능개선
+                                                </p>
+                                            </p>
+                                            <p class="text-base leading-relaxed text-black dark:text-white">BE
+                                                <p class="text-base leading-relaxed text-gray-500 dark:text-white">
+                                                    - CRUD와 JWT 설계와 제 3자 인증처리
+                                                </p>
+                                                <p class="text-base leading-relaxed text-gray-500 dark:text-white">
+                                                    - 성능개선
+                                                </p>
+                                            </p>
+                                            <p class="text-base leading-relaxed text-black dark:text-white">자격증
+                                                <p class="text-base leading-relaxed text-gray-500 dark:text-white">
+                                                    - 정보처리기사 실기 합격하기
+                                                </p>
+                                                <p class="text-base leading-relaxed text-gray-500 dark:text-white">
+                                                    - SQLD 합격하기
+                                                </p>
+                                            </p>
+                                            
+                                        </div>
+                                        <!-- Modal footer -->
+                                        <div class="flex items-center justify-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
+                                            
+                                            <button data-modal-hide="modal_default" type="button" 
+                                            class=" py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Close</button>
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                   
                 </div>
                 <!-- 2열 -->
                 <div class="grid gap-4">
@@ -207,14 +259,19 @@
                             <h1 class="text-center m-5 mb-4 text-2xl font-extrabold hover:scale-110 duration-300 leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Develop</h1>
                         </div>
                         <!-- 첫번째 사진 -->
-                    <div>                
-                        <button data-modal-target="modal_default" 
-                            data-modal-toggle="modal_default" 
+                    <div>        
+                        <button 
                             class="block text-white  focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-5 py-2.5 text-center" type="button">
-                            <!-- <img cxlass="h-auto max-w-full rounded-lg hover:scale-110 duration-300" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg" alt=""> -->
                             <video src="./video/bike-buddy.mov" class="h-auto max-w-full rounded-lg hover:scale-110 duration-300" controls autoplay loop></video>
-                            <!-- <img src="./image/bike-buddy.png" alt="" class="h-auto max-w-full rounded-lg hover:scale-110 duration-300"> -->
-                        </button>
+                        </button>        
+                        <!-- <button  -->
+                        <!-- data-modal-target="modal_default"  -->
+                            <!-- data-modal-toggle="modal_default"  -->
+                            <!-- class="block text-white  focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-5 py-2.5 text-center" type="button"> -->
+                             <!-- <img cxlass="h-auto max-w-full rounded-lg hover:scale-110 duration-300" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg" alt=""> -->
+                             <!-- <video src="./video/bike-buddy.mov" class="h-auto max-w-full rounded-lg hover:scale-110 duration-300" controls autoplay loop></video> -->
+                             <!-- <img src="./image/bike-buddy.png" alt="" class="h-auto max-w-full rounded-lg hover:scale-110 duration-300"> -->
+                        <!-- </button> -->
                         <!-- Main Modal -->
                         <div id="modal_default" tabindex="-1" aria-hidden="true" 
                             class="hidden overflow-y-auto overflow-x-hidden fixed z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
