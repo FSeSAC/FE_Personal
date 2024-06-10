@@ -14,7 +14,7 @@
 </head>
 <body class="bg-white border-gray-200 dark:bg-gray-900">
     <!-- 페이지 로드시 공지 모달 창 -->
-    <aside class="Modal">
+    <!-- <aside class="Modal">
         <div id="default-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed z-50 justify-center items-center w- md:inset-0 h-[calc(100%-1rem)] max-h-full">
         <div class="relative p-4 w-full max-w-2xl max-h-full">   
             <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
@@ -52,7 +52,7 @@
                 </div>
             </div>
         </div>
-    </aside>
+    </aside> -->
     <header class="header border 1px">
         <!-- Nav 바 -->
         <nav class="bg-white border-gray-200 dark:bg-gray-900">
@@ -179,13 +179,14 @@
                         <a class="mb-6 text-lg font-normal leading-none tracking-tight text-gray-500 lg:text-xls m:px-16 lg:px-30 xl:px-48 dark:text-gray-400">잠재력에 투자합니다</a> -->
                         <h1 class="my-10 text-center mb-4 text-2xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Potential</h1>
                     </div>
-                    <div>
+                    <div class="p-5">
                         <button data-modal-target="modal_default" 
                                 data-modal-toggle="modal_default" 
-                                class="flex relative bg-gradient-to-r from-slate-200 to-blue-200  max-w-full  h-auto rounded-lg h-60 hover:scale-110 duration-300       flex focus:ring-4 focus:outline-none" type="button">
-                                <div class="flex justify-center items-center  h-60">
-                                    <h1 class="relative text-center text-4xl top-1/4 m-20   text-2xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Next Level</h1>
-                                </div>
+                                class="flex justify-center items-center h relative bg-gradient-to-r from-slate-200 to-blue-200  max-w-full w-full h-full h-auto rounded-lg h-60 hover:scale-110 duration-300       flex focus:ring-4 focus:outline-none   h-60" type="button">
+                                
+                                    <h1 class="align-middle	text-2xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Next Level</h1>
+                                    <!-- <h1 class="relative text-center text-4xl top-1/4 m-20   text-2xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Next Level</h1> -->
+                               
                         </button>
                         <!-- Main Modal -->
                         <div id="modal_default" tabindex="-1" aria-hidden="true" 
